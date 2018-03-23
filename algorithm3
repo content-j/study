@@ -1,0 +1,42 @@
+[문제]
+A-B를 계산하시오.(0< A, B < 10)
+
+[코딩]
+public static void main(String[] args) {
+		Scanner scn = new Scanner(System.in);
+		int a = 0;
+		int b = 0;
+		
+		while (true) {
+			System.out.println("a를 입력해주세요.");
+			a = scn.nextInt();
+			if(a<=0){
+				continue;
+			}else{
+				while(true){
+					System.out.println("b를 입력해주세요.");
+					b = scn.nextInt();
+					
+					if(b<=10){
+						break;
+					}else{
+						continue;
+					}
+				}
+				break;
+			}
+
+		}
+		System.out.println("a - b = "+(a-b));
+	}
+
+[결과]
+a를 입력해주세요.
+0
+a를 입력해주세요.
+5
+b를 입력해주세요.
+11
+b를 입력해주세요.
+3
+a - b = 2
