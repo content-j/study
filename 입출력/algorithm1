@@ -2,8 +2,12 @@
 Hello World!를 출력하시오.
 
 [코딩]
-public static void main(String[] args) {
+public class Main {
+
+	public static void main(String[] args) {
 		System.out.println("Hello World!");
+	}
+
 }
 
 [결과]
