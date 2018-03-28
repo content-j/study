@@ -47,3 +47,33 @@ b의 입력값이 잘못되었습니다.
 b를 입력해주세요.
 9
 a - b = 1
+
+
+[*제출용*]
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		Scanner scn = new Scanner(System.in);
+		int a = 0;
+		int b = 0;
+
+		while (true) {
+			a = scn.nextInt();
+			if (0 >= a || 10 < a) {
+				continue;
+			}
+			break;
+		}
+		while (true) {
+			b = scn.nextInt();
+			if (0 >= b || 10 < b) {
+				continue;
+			}
+			break;
+		}
+
+		System.out.println(a - b);
+
+	}
+}
