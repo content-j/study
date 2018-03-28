@@ -14,7 +14,7 @@
 		b = scan.nextInt();;
 		
 		System.out.println("a+b 의 합은 = "+(a+b));
-
+		scan.close();
 	}
 
 [결과]
@@ -36,6 +36,6 @@ public class Main {
 		b = scan.nextInt();;
 		
 		System.out.println(a+b);
-
+		scan.close();
 	}
 }
