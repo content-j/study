@@ -15,7 +15,7 @@ public class Main {
 			if (cnt > 100) {
 				break;
 			}
-			if (!(txt.length() > 100)) {
+			if (txt.length() < 100) {
 				System.out.println(txt);
 			}
 
@@ -41,7 +41,7 @@ public class Main {
 		while (scn.hasNextLine()) {
 			txt = scn.nextLine();
 
-			if (!(txt.length() > 100)) {
+			if (txt.length() < 100) {
 				System.out.println(txt);
 			}
 
