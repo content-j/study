@@ -9,3 +9,13 @@
 [결과]
 맞은 문제수=3
 content_j
+
+[*제출용*]
+public class Main{
+    
+    public static void main(String args[]){
+        System.out.println("3");(자신이 온라인 저지에서 맞은 문제의 개수)
+        System.out.print("content_j");(본인아이디)
+    }
+    
+}
