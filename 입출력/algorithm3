@@ -27,6 +27,7 @@ A-B를 계산하시오.(0< A, B < 10)
 		}
 
 		System.out.println("a - b = " + (a - b));
+		scan.close();
 
 	}
 [결과]
@@ -74,6 +75,6 @@ public class Main {
 		}
 
 		System.out.println(a - b);
-
+		scn.close();
 	}
 }
