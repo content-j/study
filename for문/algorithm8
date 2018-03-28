@@ -1,0 +1,46 @@
+
+[문제]
+오늘은 2007년 1월 1일 월요일이다. 그렇다면 2007년 x월 y일은 무슨 요일일까? 이를 알아내는 프로그램을 작성하시오.
+
+[코딩]
+import java.util.Calendar;
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		Scanner scn = new Scanner(System.in);
+		int x = scn.nextInt();
+		int y = scn.nextInt();
+
+		Calendar cal = Calendar.getInstance();
+		cal.set(2007, x-1, y);
+		int datN = cal.get(Calendar.DAY_OF_WEEK);
+		switch (datN) {
+		case 1:
+			System.out.println("SUN");
+			break;
+		case 2:
+			System.out.println("MON");
+			break;
+		case 3:
+			System.out.println("TUE");
+			break;
+		case 4:
+			System.out.println("WED");
+			break;
+		case 5:
+			System.out.println("THU");
+			break;
+		case 6:
+			System.out.println("FRI");
+			break;
+		case 7:
+			System.out.println("SAT");
+			break;
+		}
+	}
+}
+
+[결과]
+1 1
+MON
