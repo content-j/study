@@ -1,0 +1,26 @@
+
+[문제]
+N개의 숫자가 공백 없이 쓰여있다. 이 숫자를 모두 합해서 출력하는 프로그램을 작성하시오.
+
+[코딩]
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		Scanner scn = new Scanner(System.in);
+		int n = scn.nextInt();
+		String a = scn.next();
+		int sum = 0;
+		for (int i = 0; i < n; i++) {
+			sum += Integer.parseInt(a.substring(i, i + 1));
+		}
+
+		System.out.println(sum);
+    scn.close();
+	}
+}
+
+[결과]
+3
+1234567
+6

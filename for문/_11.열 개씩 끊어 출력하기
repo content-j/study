@@ -1,0 +1,38 @@
+
+[문제]
+알파벳 소문자와 대문자로만 이루어진 길이가 N인 단어가 주어진다.
+한 줄에 10글자씩 끊어서 출력하는 프로그램을 작성하시오.
+첫째 줄에 단어가 주어진다. 단어는 알파벳 소문자와 대문자로만 이루어져 있으며, 길이는 100을 넘지 않는다. 길이가 0인 단어는 주어지지 않는다.
+
+[코딩]
+import java.util.Scanner;
+
+public class test3n1 {
+	public static void main(String[] args) {
+		Scanner scn = new Scanner(System.in);
+		String n = scn.next();
+		boolean flag = true;
+		char chr;
+		for (int i = 0; i < n.length(); i++) {
+			chr = n.charAt(i);
+			if (!((chr >= 0x41 && chr <= 0x5A) || (chr >= 0x61 && chr <= 0x7A))) {
+				flag = false;
+			}
+		}
+		if (n.length() < 100 && n.length() != 0 && flag == true) {
+			for (int i = 0; i <= n.length() / 10; i++) {
+				if (i == n.length() / 10) {
+					System.out.println(n.substring(i * 10));
+				} else {
+					System.out.println(n.substring(i * 10, (i + 1) * 10));
+				}
+			}
+		}
+		scn.close();
+	}
+}
+
+[결과]
+nicetomeetyou
+nicetomeet
+you
