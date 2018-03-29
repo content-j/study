@@ -5,7 +5,7 @@ A+B를 계산하시오.
 [코딩]
 import java.util.Scanner;
 
-public class test2n1 {
+public class Main {
 	public static void main(String[] args) {
 		Scanner scn = new Scanner(System.in);
 		int a = scn.nextInt();
