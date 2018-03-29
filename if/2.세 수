@@ -1,0 +1,34 @@
+[문제]
+세 정수 A, B, C가 주어진다. 이 때, 두 번째로 큰 정수를 출력하는 프로그램을 작성하시오. 
+
+[코딩]
+import java.util.Scanner;
+
+public class test4n {
+	public static void main(String[] args) {
+		Scanner scn = new Scanner(System.in);
+		int score;
+		int val[] = new int[3];
+		for (int i = 0; i < val.length; i++) {
+			val[i] = scn.nextInt();
+		}
+		for (int j = 0; j < val.length; j++) {
+			for (int k = j + 1; k < val.length; k++) {
+				if (val[j] > val[k]) {
+					score = val[j];
+					val[j] = val[k];
+					val[k] = score;
+				}
+			}
+
+		}
+		System.out.println(val[1]);
+		scn.close();
+	}
+}
+
+
+
+[결과]
+10 30 20
+20
