@@ -10,10 +10,7 @@ public class Main {
 		Scanner scn = new Scanner(System.in);
 		int a = scn.nextInt();
 		int b = scn.nextInt();
-		int c = a + b;
-		if (c < 10) {
-			System.out.println(c);
-		}
+		System.out.println(a+b);
 		scn.close();
 	}
 
@@ -22,5 +19,4 @@ public class Main {
 [결과]
 1 2
 3
-9 2
-(출력되지않음)
+
