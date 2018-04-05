@@ -21,6 +21,7 @@ public class Main {
 
 		}
 		System.out.println(cnt);
+		scn.close();
 	}
 
 	public static boolean flag(int number) {
