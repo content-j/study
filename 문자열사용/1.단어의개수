@@ -1,0 +1,40 @@
+[문제]
+영어 대소문자와 띄어쓰기만으로 이루어진 문장이 주어진다. 이 문장에는 몇 개의 단어가 있을까? 이를 구하는 프로그램을 작성하시오.
+
+[코딩]
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner scn = new Scanner(System.in);
+		String txt = scn.nextLine();
+
+		String split[] = txt.trim().split(" ");
+		int cnt = 0;
+		for (int i = 0; split.length > i; i++) {
+			if (!split[i].equals("")) {
+				cnt++;
+			}
+		}
+		System.out.println(cnt);
+		scn.close();
+	}
+}
+
+[결과]
+The Curious Case of Benjamin Button
+6
+
+[*풀이*]
+	public static void main(String[] args) {
+		Scanner scn = new Scanner(System.in);
+		String txt = scn.nextLine();
+		String split[] = txt.split(" ");
+		System.out.println(split.length);
+		scn.close();
+
+	}
+  위와 같이 쉽게 풀었으나 틀렸습니다.
+원인을 보니 " "띄어쓰기가 2개 연달아 올 경우 문제였습니다.
+너무 쉬우면 의심해볼 것..
