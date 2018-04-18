@@ -23,6 +23,7 @@ public class Main {
 		for (int k = 0; en.length > k; k++) {
 			System.out.print(en[k] + " ");
 		}
+		scn.close();
 	}
 }
 [결과]
