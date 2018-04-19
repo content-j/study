@@ -1,0 +1,50 @@
+[문제]
+알파벳 대소문자로 된 단어가 주어지면, 이 단어에서 가장 많이 사용된 알파벳이 무엇인지 알아내는 프로그램을 작성하시오. 단, 대문자와 소문자를 구분하지 않는다.
+첫째 줄에 이 단어에서 가장 많이 사용된 알파벳을 대문자로 출력한다. 단, 가장 많이 사용된 알파벳이 여러 개 존재하는 경우에는 ?를 출력한다.
+[코딩]
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		Scanner scn = new Scanner(System.in);
+		String txt = scn.next().toUpperCase();
+		// 알파벳별로 count하기위한 배열변수
+		int sp[] = new int[26];
+		// 맥스값을 저장할 변수
+		int max = 0;
+		// max값의 자리수 저장 변수
+		int charnum = 0;
+		// max값이 2개 이상인지 check
+		boolean maxcheck = false;
+		for (int i = 0; txt.length() > i; i++) {
+			for (int j = 0; sp.length > j; j++) {
+				if (txt.charAt(i) == (char) (65 + j)) {
+					sp[j]++;
+				}
+			}
+
+		}
+		for (int k = 0; sp.length > k; k++) {
+			if ((max == sp[k]) && max != 0) {
+				maxcheck = true;
+			} else if (max < sp[k]) {
+				max = sp[k];
+				charnum = k;
+				maxcheck = false;
+			}
+		}
+		if (maxcheck) {
+			System.out.println("?");
+		} else {
+			System.out.println((char) (65 + charnum));
+		}
+
+		scn.close();
+	}
+}
+[결과]
+baaa
+A
+gitgit
+?
+
